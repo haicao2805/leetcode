@@ -5,7 +5,7 @@ function findSmallestAvailable(initial: number, map: Map<BallNumber, Seq>) {
   for (let i = initial; i >= 1; i--) {
     let flag = true;
     for (const [, seq] of map) {
-      if (seq % i > 1 && seq % i > (seq - (seq % i)) / i) {
+      if (seq % i > (seq - (seq % i)) / i) {
         flag = false;
         break;
       }
