@@ -24,5 +24,5 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.minOperations("001011"))
-    print(s.minOperations("110"))
+    print(s.minOperations("001011") == [11, 8, 5, 4, 3, 4])
+    print(s.minOperations("110") == [1, 1, 3])
