@@ -1,7 +1,7 @@
 from typing import List
 
 class Solution:
-    def isSubnetV2(self, seq: List[int], minSeq: List[int]):
+    def isSubset(self, seq: List[int], minSeq: List[int]):
         for i in range(26):
             if(seq[i] < minSeq[i]):
                 return False
@@ -25,7 +25,7 @@ class Solution:
             for c in w:
                 seq[ord(c) - ord('a')] += 1
 
-            if self.isSubnetV2(seq, minSeq):
+            if self.isSubset(seq, minSeq):
                 res.append(w)
 
         return res
