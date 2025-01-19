@@ -1,4 +1,28 @@
 class Solution:
+    def minimizeXor(self, num1: int, num2: int) -> int:
+        def count_bits(num: int):
+            count = 0
+            while num:
+                count += num & 1
+                num = num >> 1
+            return count
+
+        res = num1
+        count1, count2 = count_bits(num1), count_bits(num2)
+
+
+
+        return res
+
+if __name__ == "__main__":
+    s = Solution()
+    print(s.minimizeXor(3,7))
+    # print(s.minimizeXor(1,12))
+    # print(s.minimizeXor(11,12))
+
+
+# The class below is old and bad Solution
+class OldAndBadSolution:
     def countSetBits(self, num: int):
         count = 0
         while num:
@@ -31,16 +55,3 @@ class Solution:
             countBitsNum2 -= 1
 
         return res
-
-if __name__ == "__main__":
-    s = Solution()
-    print(s.minimizeXor(3,5))
-    print(s.minimizeXor(1,12))
-    print(s.minimizeXor(11,12))
-
-
-# 1011
-# 1010
-# 0001
-
-# 1000100
