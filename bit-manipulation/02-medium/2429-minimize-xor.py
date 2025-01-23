@@ -10,15 +10,26 @@ class Solution:
         res = num1
         count1, count2 = count_bits(num1), count_bits(num2)
 
-
+        idx = 0
+        while count2 < count1:
+            if res >> idx & 1 == 1:
+                count1 -= 1
+                res = res ^ (1 << idx)
+            idx += 1
+        while count2 > count1:
+            if res >> idx & 1 == 0:
+                count1 += 1
+                res = res | (1 << idx)
+            idx += 1
 
         return res
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.minimizeXor(3,7))
-    # print(s.minimizeXor(1,12))
-    # print(s.minimizeXor(11,12))
+    print(s.minimizeXor(12,7))
+    print(s.minimizeXor(1,12))
+    print(s.minimizeXor(3,5))
+    print(s.minimizeXor(25,72))
 
 
 # The class below is old and bad Solution
