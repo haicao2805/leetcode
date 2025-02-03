@@ -8,7 +8,7 @@ class Solution:
         power = 1
 
         for i, c in enumerate(s):
-            num = ord(c) - ord('a') + 1
+            num = ord(c) - ord("a") + 1
             prefix = (prefix * base + num) % m
             suffix = (suffix + power * num) % m
             power = power * base
@@ -16,10 +16,11 @@ class Solution:
             if prefix == suffix:
                 lastIdx = i
 
-        subStr = s[lastIdx + 1:]
+        subStr = s[lastIdx + 1 :]
         reversedStr = subStr[::-1]
 
         return reversedStr + s
+
 
 if __name__ == "__main__":
     s = Solution()

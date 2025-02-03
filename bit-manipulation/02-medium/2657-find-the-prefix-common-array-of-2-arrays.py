@@ -1,8 +1,11 @@
 from typing import List
 
+
 class Solution:
     def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
-        mapA, mapB = {} # 0 mean not exist, 1 mean exist but not use, 2 mean exist and used
+        mapA, mapB = (
+            {}
+        )  # 0 mean not exist, 1 mean exist but not use, 2 mean exist and used
         count = 0
         n = len(A)
         res = []
@@ -30,11 +33,11 @@ class Solution:
 
             res.append(count)
 
-
         return res
+
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.findThePrefixCommonArray([1,3,2,4],[3,1,2,4]))
-    print(s.findThePrefixCommonArray([2,3,1],[3,1,2]))
-    print(s.findThePrefixCommonArray([2,2,2],[2,2,2]))
+    print(s.findThePrefixCommonArray([1, 3, 2, 4], [3, 1, 2, 4]))
+    print(s.findThePrefixCommonArray([2, 3, 1], [3, 1, 2]))
+    print(s.findThePrefixCommonArray([2, 2, 2], [2, 2, 2]))

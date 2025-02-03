@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def uniqueOccurrences(self, arr: List[int]) -> bool:
         hmap = {}
@@ -16,6 +17,7 @@ class Solution:
             occurSet.add(v)
         return True
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.uniqueOccurrences([1,2,2,1,1,3]))
+    print(s.uniqueOccurrences([1, 2, 2, 1, 1, 3]))

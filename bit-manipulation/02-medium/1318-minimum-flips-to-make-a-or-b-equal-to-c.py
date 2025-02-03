@@ -12,14 +12,17 @@ class Solution:
                 a = a | (1 << i)
             else:
                 res += bitA + bitB
-                if bitA == 1: a = a ^ (1 << i)
-                if bitB == 1: b = b ^ (1 << i)
+                if bitA == 1:
+                    a = a ^ (1 << i)
+                if bitB == 1:
+                    b = b ^ (1 << i)
             i += 1
 
         return res
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.minFlips(2,6,5) == 3)
-    print(s.minFlips(4,2,7) == 1)
-    print(s.minFlips(1,2,3) == 0)
+    print(s.minFlips(2, 6, 5) == 3)
+    print(s.minFlips(4, 2, 7) == 1)
+    print(s.minFlips(1, 2, 3) == 0)

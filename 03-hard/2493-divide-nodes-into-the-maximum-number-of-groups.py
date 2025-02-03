@@ -1,6 +1,7 @@
 from collections import defaultdict, deque
 from typing import List
 
+
 class Solution:
     def magnificentSets(self, n: int, edges: List[List[int]]) -> int:
         visit = set()
@@ -25,7 +26,7 @@ class Solution:
             return component
 
         def longestPath(src: int):
-            q = deque([(src, 1)]) # (node, group)
+            q = deque([(src, 1)])  # (node, group)
             dist = {src: 1}
 
             while q:
@@ -38,7 +39,6 @@ class Solution:
                     q.append((nei, length + 1))
                     dist[nei] = length + 1
             return max(dist.values())
-
 
         for i in range(1, n + 1):
             if i in visit:
@@ -55,7 +55,8 @@ class Solution:
             res += maxCnt
         return res
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.magnificentSets(6, [[1,2],[1,4],[1,5],[2,6],[2,3],[4,6]]))
-    print(s.magnificentSets(3, [[1,2],[1,4],[1,5],[2,6],[2,3],[4,6]]))
+    print(s.magnificentSets(6, [[1, 2], [1, 4], [1, 5], [2, 6], [2, 3], [4, 6]]))
+    print(s.magnificentSets(3, [[1, 2], [1, 4], [1, 5], [2, 6], [2, 3], [4, 6]]))

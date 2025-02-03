@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         N = len(graph)
@@ -21,8 +22,9 @@ class Solution:
                 res.append(i)
         return res
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.eventualSafeNodes([[1,2],[2,3],[5],[0],[5],[],[]]))
-    print(s.eventualSafeNodes([[1,2,3,4],[1,2],[3,4],[0,4],[]]))
-    print(s.eventualSafeNodes([[],[0,2,3,4],[3],[4],[]]))
+    print(s.eventualSafeNodes([[1, 2], [2, 3], [5], [0], [5], [], []]))
+    print(s.eventualSafeNodes([[1, 2, 3, 4], [1, 2], [3, 4], [0, 4], []]))
+    print(s.eventualSafeNodes([[], [0, 2, 3, 4], [3], [4], []]))

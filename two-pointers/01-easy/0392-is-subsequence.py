@@ -14,6 +14,7 @@ class Solution:
 
         return i == len(s)
 
+
 if __name__ == "__main__":
     s = Solution()
     print(s.isSubsequence("abc", "ahbgdc") == True)

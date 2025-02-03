@@ -1,6 +1,7 @@
 from heapq import heappop, heappush
 from typing import List
 
+
 class Solution:
     def trapRainWater(self, heightMap: List[List[int]]) -> int:
         ROWS, COLS = len(heightMap), len(heightMap[0])
@@ -13,7 +14,6 @@ class Solution:
                     heappush(minHeap, (heightMap[r][c], r, c))
                     heightMap[r][c] = VISITED
 
-
         res = 0
         maxHeight = 0
 
@@ -22,15 +22,32 @@ class Solution:
             maxHeight = max(maxHeight, h)
             res += maxHeight - h
 
-            neighbors = [(r+1,c), (r-1,c), (r,c+1), (r,c-1)]
+            neighbors = [(r + 1, c), (r - 1, c), (r, c + 1), (r, c - 1)]
             for nr, nc in neighbors:
-                if 0 <= nr <= ROWS - 1 and 0 <= nc <= COLS - 1 and heightMap[nr][nc] != VISITED:
+                if (
+                    0 <= nr <= ROWS - 1
+                    and 0 <= nc <= COLS - 1
+                    and heightMap[nr][nc] != VISITED
+                ):
                     heappush(minHeap, (heightMap[nr][nc], nr, nc))
                     heightMap[nr][nc] = VISITED
 
         return res
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.trapRainWater([[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]])) # 4
-    print(s.trapRainWater([[3,3,3,3,3],[3,2,2,2,3],[3,2,1,2,3],[3,2,2,2,3],[3,3,3,3,3]]))
+    print(
+        s.trapRainWater([[1, 4, 3, 1, 3, 2], [3, 2, 1, 3, 2, 4], [2, 3, 3, 2, 3, 1]])
+    )  # 4
+    print(
+        s.trapRainWater(
+            [
+                [3, 3, 3, 3, 3],
+                [3, 2, 2, 2, 3],
+                [3, 2, 1, 2, 3],
+                [3, 2, 2, 2, 3],
+                [3, 3, 3, 3, 3],
+            ]
+        )
+    )

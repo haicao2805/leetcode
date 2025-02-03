@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         """
@@ -14,8 +15,9 @@ class Solution:
         for i in range(lastNonZeroIdx, N):
             nums[i] = 0
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.moveZeroes([0,1,0,3,12]))
-    print(s.moveZeroes([0,0,0,3,0]))
+    print(s.moveZeroes([0, 1, 0, 3, 12]))
+    print(s.moveZeroes([0, 0, 0, 3, 0]))
     print(s.moveZeroes([0]))

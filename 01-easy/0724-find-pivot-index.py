@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
         N = len(nums)
@@ -14,6 +15,7 @@ class Solution:
 
         return -1
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.pivotIndex([2,1,-1]))
+    print(s.pivotIndex([2, 1, -1]))

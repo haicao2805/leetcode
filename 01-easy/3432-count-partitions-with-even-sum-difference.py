@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def countPartitions(self, nums: List[int]) -> int:
         N = len(nums)
@@ -17,8 +18,9 @@ class Solution:
 
         return res
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.countPartitions([10,10,3,7,6]))
-    print(s.countPartitions([2,4,6,8]))
-    print(s.countPartitions([1,2,2]))
+    print(s.countPartitions([10, 10, 3, 7, 6]))
+    print(s.countPartitions([2, 4, 6, 8]))
+    print(s.countPartitions([1, 2, 2]))

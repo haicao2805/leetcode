@@ -1,11 +1,12 @@
 from collections import deque
 from typing import List
 
+
 # Optimise one
 class Solution:
     def lexicographicallySmallestArray(self, nums: List[int], limit: int) -> List[int]:
         groups: List[deque] = []
-        mapNumToGroup: dict[int,int] = {}
+        mapNumToGroup: dict[int, int] = {}
 
         for n in sorted(nums):
             if not groups or abs(n - groups[-1][-1]) > limit:
@@ -21,6 +22,7 @@ class Solution:
 
         return res
 
+
 class OldSolution:
     def lexicographicallySmallestArray(self, nums: List[int], limit: int) -> List[int]:
         N = len(nums)
@@ -33,7 +35,7 @@ class OldSolution:
         curGroupIdx = 0
         groups.append([sortedNums[0]])
         mapNumToGroup[sortedNums[0]] = curGroupIdx
-        for i in range(1,N):
+        for i in range(1, N):
             currentGroup = groups[curGroupIdx]
             numInCurrentGroup = currentGroup[len(currentGroup) - 1]
 
@@ -52,7 +54,8 @@ class OldSolution:
 
         return res
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.lexicographicallySmallestArray([1,5,3,9,8], 2))
-    print(s.lexicographicallySmallestArray([1,7,6,18,2,1], 3))
+    print(s.lexicographicallySmallestArray([1, 5, 3, 9, 8], 2))
+    print(s.lexicographicallySmallestArray([1, 7, 6, 18, 2, 1], 3))

@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def waysToSplitArray(self, nums: List[int]) -> int:
         # Prefix sum for the left side

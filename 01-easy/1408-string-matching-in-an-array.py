@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def stringMatching(self, words: List[str]) -> List[str]:
         res: List[str] = []
@@ -17,5 +18,5 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.stringMatching(["mass","as","hero","superhero"]))
-    print(s.stringMatching(["leetcoder","leetcode","od","hamlet","am"]))
+    print(s.stringMatching(["mass", "as", "hero", "superhero"]))
+    print(s.stringMatching(["leetcoder", "leetcode", "od", "hamlet", "am"]))

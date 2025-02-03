@@ -1,5 +1,6 @@
 from typing import List
 
+
 # Sort
 class SortSolution:
     def duplicateNumbersXOR(self, nums: List[int]) -> int:
@@ -7,7 +8,7 @@ class SortSolution:
 
         sortedNums = sorted(nums)
 
-        for i in range(1,len(nums)):
+        for i in range(1, len(nums)):
             if sortedNums[i] ^ sortedNums[i - 1] == 0:
                 res ^= sortedNums[i]
 

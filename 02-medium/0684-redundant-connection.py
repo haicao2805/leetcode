@@ -1,6 +1,7 @@
 from collections import deque
 from typing import List
 
+
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
         N = len(edges)
@@ -42,7 +43,8 @@ class Solution:
 
         return []
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.findRedundantConnection([[1,2],[2,3],[3,4],[1,4],[1,5]]))
-    print(s.findRedundantConnection([[1,2],[1,3],[2,3]]))
+    print(s.findRedundantConnection([[1, 2], [2, 3], [3, 4], [1, 4], [1, 5]]))
+    print(s.findRedundantConnection([[1, 2], [1, 3], [2, 3]]))

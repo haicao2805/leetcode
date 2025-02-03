@@ -1,5 +1,6 @@
 from typing import List, Dict
 
+
 class Solution:
     def findSmallestAvailable(self, initial: int, mapping: Dict[int, int]) -> int:
         for i in range(initial, 0, -1):

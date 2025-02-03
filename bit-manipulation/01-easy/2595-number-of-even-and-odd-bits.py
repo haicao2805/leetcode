@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def evenOddBit(self, n: int) -> List[int]:
         even, odd = 0, 0
@@ -11,6 +12,7 @@ class Solution:
             n >>= 1
 
         return [even, odd]
+
 
 if __name__ == "__main__":
     s = Solution()

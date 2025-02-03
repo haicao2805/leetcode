@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def maxFrequency(self, nums: List[int], k: int) -> int:
         N = len(nums)
@@ -21,11 +22,12 @@ class Solution:
                 res = max(res, freKOnRight + freVOnLeft - lossK)
         return res
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.maxFrequency([10,2,3,4,5,5,4,3,2,2], 10) == 4)
-    print(s.maxFrequency([1,2,3,4,5,6], 1) == 2)
-    print(s.maxFrequency([10,2,2,2,10,2], 10) == 5)
-    print(s.maxFrequency([2,8], 8) == 2)
-    print(s.maxFrequency([1,9], 8) == 1)
-    print(s.maxFrequency([3,8,5,3,5,2,2],8) == 3)
+    print(s.maxFrequency([10, 2, 3, 4, 5, 5, 4, 3, 2, 2], 10) == 4)
+    print(s.maxFrequency([1, 2, 3, 4, 5, 6], 1) == 2)
+    print(s.maxFrequency([10, 2, 2, 2, 10, 2], 10) == 5)
+    print(s.maxFrequency([2, 8], 8) == 2)
+    print(s.maxFrequency([1, 9], 8) == 1)
+    print(s.maxFrequency([3, 8, 5, 3, 5, 2, 2], 8) == 3)

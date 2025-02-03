@@ -1,12 +1,13 @@
 from collections import deque
 from typing import DefaultDict, List
 
+
 class Solution:
     def largestIsland(self, grid: List[List[int]]) -> int:
         N = len(grid)
 
         def isValid(r: int, c: int) -> bool:
-            return 0 <= r <= N-1 and 0 <= c <= N-1
+            return 0 <= r <= N - 1 and 0 <= c <= N - 1
 
         def bfs(r: int, c: int, label: int) -> int:
             s = 0
@@ -19,7 +20,7 @@ class Solution:
                 grid[r][c] = label
                 s += 1
 
-                neighbors = [(r+1,c),(r-1,c),(r,c+1),(r,c-1)]
+                neighbors = [(r + 1, c), (r - 1, c), (r, c + 1), (r, c - 1)]
                 for nr, nc in neighbors:
                     if isValid(nr, nc) and grid[nr][nc] == 1:
                         q.append((nr, nc, label))
@@ -40,7 +41,7 @@ class Solution:
                 if grid[r][c] == 0:
                     tmp = 1
                     hmap = {}
-                    neighbors = [(r+1,c),(r-1,c),(r,c+1),(r,c-1)]
+                    neighbors = [(r + 1, c), (r - 1, c), (r, c + 1), (r, c - 1)]
                     for nr, nc in neighbors:
                         if isValid(nr, nc) and grid[nr][nc] != 0:
                             if grid[nr][nc] not in hmap:
@@ -50,15 +51,20 @@ class Solution:
 
         return res
 
+
 if __name__ == "__main__":
     s = Solution()
     # print(s.largestIsland([[1,0],[0,1]]))
     # print(s.largestIsland([[1,1],[1,0]]))
-    print(s.largestIsland([[1,1],[1,1]]))
-    print(s.largestIsland([
-        [0,0,1,0,0],
-        [0,0,1,0,0],
-        [1,1,0,1,1],
-        [0,0,1,0,0],
-        [0,0,1,0,0],
-        ]))
+    print(s.largestIsland([[1, 1], [1, 1]]))
+    print(
+        s.largestIsland(
+            [
+                [0, 0, 1, 0, 0],
+                [0, 0, 1, 0, 0],
+                [1, 1, 0, 1, 1],
+                [0, 0, 1, 0, 0],
+                [0, 0, 1, 0, 0],
+            ]
+        )
+    )

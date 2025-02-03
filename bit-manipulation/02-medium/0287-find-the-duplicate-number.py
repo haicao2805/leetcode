@@ -1,5 +1,6 @@
 from typing import List
 
+
 # Bit manipulation
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:

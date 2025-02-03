@@ -24,12 +24,13 @@ class Solution:
 
         return res
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.minimizeXor(12,7))
-    print(s.minimizeXor(1,12))
-    print(s.minimizeXor(3,5))
-    print(s.minimizeXor(25,72))
+    print(s.minimizeXor(12, 7))
+    print(s.minimizeXor(1, 12))
+    print(s.minimizeXor(3, 5))
+    print(s.minimizeXor(25, 72))
 
 
 # The class below is old and bad Solution
@@ -49,12 +50,12 @@ class OldAndBadSolution:
             bits.append(num1 & 1)
             num1 >>= 1
 
-        for i,v in enumerate(bits[::-1]):
+        for i, v in enumerate(bits[::-1]):
             if v == 1 and countBitsNum2:
                 countBitsNum2 -= 1
                 res += pow(2, len(bits) - i - 1)
 
-        for i,v in enumerate(bits):
+        for i, v in enumerate(bits):
             if v == 0 and countBitsNum2:
                 countBitsNum2 -= 1
                 res += pow(2, i)

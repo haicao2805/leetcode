@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def doesValidArrayExist(self, derived: List[int]) -> bool:
         res = 0
@@ -8,6 +9,7 @@ class Solution:
             res ^= i
 
         return res == 0
+
 
 # Explain
 # [d1, d2, d3] -> derived
@@ -24,6 +26,6 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.doesValidArrayExist([1,1,0]))
-    print(s.doesValidArrayExist([1,1]))
-    print(s.doesValidArrayExist([1,0]))
+    print(s.doesValidArrayExist([1, 1, 0]))
+    print(s.doesValidArrayExist([1, 1]))
+    print(s.doesValidArrayExist([1, 0]))

@@ -1,18 +1,20 @@
 from typing import List
 
+
 class Solution:
     def canConstruct(self, s: str, k: int) -> bool:
         freq: List[int] = [0] * 26
 
         for c in s:
-           freq[ord(c) - ord('a')] += 1
+            freq[ord(c) - ord("a")] += 1
 
         sumMod = 0
         for i in range(len(freq)):
-            if(freq[i] != 0):
+            if freq[i] != 0:
                 sumMod += freq[i] % 2
 
         return len(s) >= k and sumMod <= k
+
 
 if __name__ == "__main__":
     s = Solution()

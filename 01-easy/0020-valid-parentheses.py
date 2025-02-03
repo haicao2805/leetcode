@@ -1,11 +1,7 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        openChar = ['(', '[', '{']
-        closeCharMap = {
-           ')': '(',
-           ']': '[',
-           '}': '{'
-        }
+        openChar = ["(", "[", "{"]
+        closeCharMap = {")": "(", "]": "[", "}": "{"}
         stack = []
 
         for c in s:
@@ -17,6 +13,7 @@ class Solution:
                 else:
                     stack.pop()
         return not stack
+
 
 if __name__ == "__main__":
     s = Solution()

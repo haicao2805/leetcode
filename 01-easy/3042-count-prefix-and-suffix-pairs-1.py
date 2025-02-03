@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def isPrefixAndSuffix(self, str1: str, str2: str) -> int:
         if len(str1) > len(str2):
@@ -8,11 +9,11 @@ class Solution:
         if str1 == str2:
             return 1
 
-        prefix = str2[0:len(str1)]
+        prefix = str2[0 : len(str1)]
         if prefix != str1:
             return 0
 
-        suffix = str2[-len(str1):]
+        suffix = str2[-len(str1) :]
         if suffix != str1:
             return 0
 
@@ -31,5 +32,5 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.countPrefixSuffixPairs(["a","aba","ababa","aa"]))
-    print(s.countPrefixSuffixPairs(["pa","papa","ma","mama"]))
+    print(s.countPrefixSuffixPairs(["a", "aba", "ababa", "aa"]))
+    print(s.countPrefixSuffixPairs(["pa", "papa", "ma", "mama"]))

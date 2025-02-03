@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def xorAllNums(self, nums1: List[int], nums2: List[int]) -> int:
         res = 0
@@ -16,7 +17,8 @@ class Solution:
 
         return res
 
+
 if __name__ == "__main__":
     s = Solution()
-    print(s.xorAllNums([2,1,3],[10,2,5,0]))
-    print(s.xorAllNums([1,2],[3,4]))
+    print(s.xorAllNums([2, 1, 3], [10, 2, 5, 0]))
+    print(s.xorAllNums([1, 2], [3, 4]))
