@@ -3,8 +3,8 @@ class Solution:
         res = numBottles
 
         while numBottles >= numExchange:
-            res += numBottles // numExchange
             exchangedBottles = numBottles // numExchange
+            res += exchangedBottles
             numBottles = exchangedBottles + numBottles - numExchange * exchangedBottles
 
         return res
